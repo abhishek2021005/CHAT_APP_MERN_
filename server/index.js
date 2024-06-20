@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-origin: process.env.CLIENT_URL || "http://localhost:3000", // Adjust as per your deployment URL
+origin: process.env.CLIENT_URL || "https://localhost:3000", // Adjust as per your deployment URL
    })
 );
 
