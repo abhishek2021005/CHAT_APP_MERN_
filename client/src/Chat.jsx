@@ -26,10 +26,10 @@ export default function Chat () {
        const wws = import.meta.env.VITE_WS_URL;
 
 
-    const ws = new WebSocket(wws);
+    const ws = new WebSocket('wws');
 
-    // const ws = new WebSocket('ws://localhost:4040');
-    // const ws = new WebSocket('ws://localhost:5173');
+    // const ws = new WebSocket('wss://localhost:4040');
+    // const ws = new WebSocket('wss://localhost:5173');
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () => {
@@ -41,7 +41,7 @@ export default function Chat () {
   }
     
     // useEffect(() => {
-    //    const ws =  new WebSocket('ws://localhost:4040');
+    //    const ws =  new WebSocket('wss://localhost:4040');
     //    setWs(ws);
     //    ws.addEventListener('message', handleMessage)
     // }, []);
