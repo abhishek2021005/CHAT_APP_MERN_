@@ -22,9 +22,10 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: process.env.CLIENT_URL,
-  })
+origin: process.env.CLIENT_URL || "http://localhost:3000", // Adjust as per your deployment URL
+   })
 );
+
 
 async function getUserDataFromRequest(req) {
   return new Promise((resolve, reject) => {
